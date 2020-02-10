@@ -27,6 +27,18 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `@kentico/gatsby-source-kontent`,
+        options: {
+          deliveryClientConfig: {
+            projectId: `8fd4e2e9-4a9d-00d4-c642-1440379e504f` // Fill in your Project ID
+          },
+          // Please note that with the Sample Project generated above, `en-US` is the default language for the project and this config. For a blank project, this needs to be `default`.
+          languageCodenames: [
+                    `default` // Or the languages in your project (Project settings -> Localization)
+          ]
+      }
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
